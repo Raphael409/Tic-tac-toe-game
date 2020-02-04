@@ -4,3 +4,41 @@
   margin: 20px;
   padding: 20px;
 }
+
+table,
+th,
+td {
+  border: 4px solid black;
+  border-collapse: collapse;
+  padding: 20px;
+}
+
+.align {
+  text-align: Center;
+  color: RoyalBlue;
+}
+
+.cells {
+  background-color: powderblue;
+  padding: 20px;
+  align: Center;
+}
+
+body {
+  background-color: powderblue;
+}
+
+.player-button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #e7e7e7;
+  color: black;
+}
