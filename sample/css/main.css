@@ -1,3 +1,15 @@
+a:link{
+  text-decoration:none;}
+
+.b{
+  border:20px solid #440066;
+  width:250px;
+  height:650px;
+  padding:40px;
+  margin-right:auto;
+  margin-left:auto;
+  }
+
 .cities {
   background-color: tomato;
   color: white;
@@ -14,7 +26,8 @@ td {
 }
 
 .align {
-  text-align: Center;
+position: center
+  text-align: center;
   color: RoyalBlue;
 }
 
@@ -41,4 +54,5 @@ body {
   cursor: pointer;
   background-color: #e7e7e7;
   color: black;
+  text-font:bold;
 }

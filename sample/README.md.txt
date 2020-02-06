@@ -1,1 +1,2 @@
-The display of Tic tac toe on web interface
+The display of Tic tac toe game on web interface.
+
