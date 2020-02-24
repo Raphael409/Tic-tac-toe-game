@@ -4,65 +4,76 @@
   <link rel="stylesheet" href="css/main.css" />
   <title>tic tac toe</title>
 
-    <body class= "b">
+  <body class="b">
 
 
-      <div class="align">
-   	 <h1><u>TicTacToe</u></h1>
-         <button class="player-button">X</button>
-         <button class="player-button">O</button>
-         <h2>Turns:</h2>
-      </div>
+    <div class="align">
+      <h1><u>TicTacToe</u></h1>
+      <button class="player-button">X</button>
+      <button class="player-button">O</button>
+      <h2>Turns:</h2>
+    </div>
 
 
-      <div class="cells">
-         <table style="margin-left: auto;margin-right: auto;">
-           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-           </tr>
-           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-           </tr>
-           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-  
-      <h4>Score</h4>
-        <table>	
-	  <tr>
-	   <td></td>
-	   </tr>
-	</table>
-	<h4>Score</h4>
-	<table>	
-	  <tr>
-	   <td></td>
-	  </tr>
-	</table>
-       <div class="align">
-          <a href="https://github.com/Raphael409/Tic-tac-toe-game/issues/4" target="_blank">Click to view history</a>  
-       </div>
-       <input type="button" id="btnClick" value="Exit" />
-       
-  <p id="demo"></p>
-  <script>
-    function datetime()
-      {
-      var date = new Date();
-      document.getElementById("demo").innerHTML= date;
-      }
-      setInterval(datetime, 1000);</script>
-     </sript>	
-      
-         
-</body>
+    <div class="cells">
+      <table style="margin-left: auto;margin-right: auto;">
+        <tr>
+          <td>
+            <button id="btn1" div class="buttons"></button>
+          </td>
+          <td>
+            <button id="btn2" div class="buttons"></button>
+          </td>
+          <td>
+            <button id="btn3" div class="buttons"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="btn4" div class="buttons"></button>
+          </td>
+          <td>
+            <button id="btn5" div class="buttons"></button>
+          </td>
+          <td>
+            <button id="btn6" div class="buttons"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="btn7" div class="buttons"></button>
+          </td>
+          <td>
+            <button id="btn8" div class="buttons"></button>
+          </td>
+          <td>
+            <button id="btn9" div class="buttons"></button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <h4>Score</h4>
+    <div class="td"></div>
+    <table>
+      <tr></tr>
+    </table>
+    </div>
+    <h4>Score</h4>
+    <div class="td">
+      <table>
+        <tr></tr>
+      </table>
+    </div>
+    <div class="align">
+      <a href="https://github.com/Raphael409/Tic-tac-toe-game/issues/4" target="_blank">Click to view history</a>
+    </div>
+    <button onclick="startGame()">Restart</button>
+
+    <p id="demo"></p>
+    <script src="script.js"></script>
+
+  </body>
 </center>
+
 </html>
