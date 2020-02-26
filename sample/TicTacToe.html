@@ -1,79 +1,77 @@
 <!DOCTYPE html>
 <html>
-<center>
-  <link rel="stylesheet" href="css/main.css" />
-  <title>tic tac toe</title>
+<link rel="stylesheet" href="css/main.css" />
+<title>Tic Tac Toe</title>
 
-  <body class="b">
-
-
-    <div class="align">
-      <h1><u>TicTacToe</u></h1>
-      <button class="player-button">X</button>
-      <button class="player-button">O</button>
-      <h2>Turns:</h2>
-    </div>
+<body class="b">
 
 
-    <div class="cells">
-      <table style="margin-left: auto;margin-right: auto;">
-        <tr>
-          <td>
-            <button id="btn1" div class="buttons"></button>
-          </td>
-          <td>
-            <button id="btn2" div class="buttons"></button>
-          </td>
-          <td>
-            <button id="btn3" div class="buttons"></button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button id="btn4" div class="buttons"></button>
-          </td>
-          <td>
-            <button id="btn5" div class="buttons"></button>
-          </td>
-          <td>
-            <button id="btn6" div class="buttons"></button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button id="btn7" div class="buttons"></button>
-          </td>
-          <td>
-            <button id="btn8" div class="buttons"></button>
-          </td>
-          <td>
-            <button id="btn9" div class="buttons"></button>
-          </td>
-        </tr>
-      </table>
-    </div>
+  <div class="align">
+    <h1><u>TicTacToe</u></h1>
+    <button class="player-button">X</button>
+    <button class="player-button">O</button>
+    <h2>Turns:</h2>
+  </div>
 
-    <h4>Score</h4>
-    <div class="td"></div>
+
+  <div class="cells">
+    <table style="margin-left: auto;margin-right: auto;">
+      <tr>
+        <td>
+          <button id="btn1" class="buttons" onclick="updateButtons('btn1')"></button>
+        </td>
+        <td>
+          <button id="btn2" class="buttons" onclick="updateButtons('btn2')"></button>
+        </td>
+        <td>
+          <button id="btn3" class="buttons" onclick="updateButtons('btn3')"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="btn4" class="buttons" onclick="updateButtons('btn4')"></button>
+        </td>
+        <td>
+          <button id="btn5" class="buttons" onclick="updateButtons('btn5')"></button>
+        </td>
+        <td>
+          <button id="btn6" class="buttons" onclick="updateButtons('btn6')"></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="btn7" class="buttons" onclick="updateButtons('btn7')"></button>
+        </td>
+        <td>
+          <button id="btn8" class="buttons" onclick="updateButtons('btn8')"></button>
+        </td>
+        <td>
+          <button id="btn9" class="buttons" onclick="updateButtons('btn9')"></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h4>Score</h4>
+  <div class="td"></div>
+  <table>
+    <tr></tr>
+  </table>
+  </div>
+  <h4>Score</h4>
+  <div class="td">
     <table>
       <tr></tr>
     </table>
-    </div>
-    <h4>Score</h4>
-    <div class="td">
-      <table>
-        <tr></tr>
-      </table>
-    </div>
-    <div class="align">
-      <a href="https://github.com/Raphael409/Tic-tac-toe-game/issues/4" target="_blank">Click to view history</a>
-    </div>
-    <button onclick="startGame()">Restart</button>
+  </div>
+  <div class="align">
+    <a href="https://github.com/Raphael409/Tic-tac-toe-game/issues/4" target="_blank">Click to view history</a>
+  </div>
+  <button onclick="startGame()">Restart</button>
 
-    <p id="demo"></p>
-    <script src="script.js"></script>
+  <p id="demo"></p>
+  <script src="js/script.js"></script>
 
-  </body>
-</center>
+</body>
 
 </html>
