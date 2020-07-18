@@ -10,7 +10,11 @@
     <h1><u>TicTacToe</u></h1>
     <button class="player-button">X</button>
     <button class="player-button">O</button>
-    <h2>Turns:</h2>
+    <div class="block">
+      <h2 class="score">Turn:</h2>
+      <h2 id="turns" class="turns" class="score">X's First move</h2>
+    </div>
+
   </div>
 
 
@@ -51,24 +55,30 @@
       </tr>
     </table>
   </div>
+  <div class="block">
+    <h4 class="score">X-Score:</h4>
+    <div class="tds">
+      <h4 class="score">0</h4>
+    </div>
 
-  <h4>Score</h4>
-  <div class="td"></div>
-  <table>
-    <tr></tr>
-  </table>
   </div>
-  <h4>Score</h4>
-  <div class="td">
-    <table>
-      <tr></tr>
-    </table>
+  <div class="block">
+    <h4 class="score">O-Score:</h4>
+    <div class="tds">
+      <div class="score">
+        <h4>0</h4>
+      </div>
+    </div>
+
   </div>
+
   <div class="align">
     <a href="https://github.com/Raphael409/Tic-tac-toe-game/issues/4" target="_blank">Click to view history</a>
   </div>
-  <button onclick="startGame()">Restart</button>
-
+  <div class="bt">
+    <button class="bt" onclick="startGame()">Restart</button>
+    <button class="bt">Exit Game</button>
+  </div>
   <p id="demo"></p>
   <script src="js/script.js"></script>
 

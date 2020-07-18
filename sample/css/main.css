@@ -1,14 +1,25 @@
-a:link{
-  text-decoration:none;}
+a:link {
+  text-decoration: none;
+}
 
-.b{
-  border:20px solid #440066;
-  width:250px;
-  height:650px;
-  padding:40px;
-  margin-right:auto;
-  margin-left:auto;
-  }
+.b {
+  border: 20px solid #ffffff;
+  width: 250px;
+  height: 650px;
+  padding: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4));
+}
+.block {
+  display: flex;
+  text-align: center;
+  background: linear-gradient(to right, #dd1616, #bb5e12, #d3d00e);
+  border-radius: 30px;
+  color: black;
+  margin-bottom: 10px;
+}
 
 .cities {
   background-color: tomato;
@@ -26,15 +37,17 @@ td {
 }
 
 .align {
-position: center
+  position: center;
   text-align: center;
-  color: RoyalBlue;
+  color: rgb(255, 255, 255);
 }
 
 .cells {
-  background-color: powderblue;
   padding: 2px;
   text-align: Center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 30px;
 }
 
 body {
@@ -44,7 +57,7 @@ body {
 .player-button {
   background-color: #4caf50; /* Green */
   border: none;
-  color: white;
+  color: rgb(122, 102, 102);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -52,33 +65,49 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: #e7e7e7;
+  background-color: #ddd8d8;
   color: black;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .buttons {
-border: rgb(6, 6, 12);
-margin-left: auto;
-margin-right: auto;
-width: 50px;
-height: 50px;
-border-style: solid;
-align-items: center;
-font-size: 30px;
-font-weight: bolder;
+  border: rgb(6, 6, 12);
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+  border-style: solid;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 300;
+  cursor: pointer;
 }
-
-.buttons-color-blue{
-  background-color: #0d0d74;
+.buttons-color-blue {
+  background-color: #00008b;
 }
-
-.buttons-color-red{
-  background-color: red;
+.buttons-color-red {
+  background-color: rgb(201, 5, 5);
 }
-
 .td {
   border-style: ridge;
   height: 40px;
   width: 70px;
+}
+.bt {
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  outline: none;
+}
+.bt button {
+  height: 30px;
+  width: 80px;
+  padding: 5px 5px 5px 5px;
+}
+.score {
+  text-align: center;
+  margin-left: 30px;
 }
