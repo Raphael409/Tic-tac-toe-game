@@ -1,6 +1,16 @@
 from flask import Flask, jsonify
+from flask_mysqldb import MySQL
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'tictactoe'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+CORS(app)
+mysql = MySQL(app)
 
 #  This is  an example of saved games
 past_games = [
