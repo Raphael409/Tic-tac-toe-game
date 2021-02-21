@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="css/main.css" />
-<title>Tic Tac Toe</title>
-
-<body class="b">
+{% extends "layout.html" %}
+{% block title%}
+    Home page
+{% endblock%}
+{% block content %}
+    <body class="b">
 
 
   <div class="align">
@@ -81,7 +81,5 @@
   </div>
   <p id="demo"></p>
   <script src="js/script.js"></script>
+{% endblock content %}
 
-</body>
-
-</html>
