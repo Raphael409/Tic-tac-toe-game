@@ -12,25 +12,6 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 CORS(app)
 mysql = MySQL(app)
 
-#  This is  an example of saved games
-past_games = [
-    {
-        'when': '2020-08-06',
-        'winner': 'X'
-    },
-    {
-        'when': '2020-08-05',
-        'winner': 'O'
-    },
-    {
-        'when': '2020-08-04',
-        'winner': 'X'
-    },
-    {
-        'when': '2020-08-02',
-        'winner': ')'
-    }
-]
 # This is an example of a current game
 current_game = [['X', 'O', ''], ['', '', ''], ['', '', '']]
 
@@ -42,6 +23,10 @@ def index():
 
 @app.route('/api/games/recent/', methods=['GET'])
 def recent_games():
+    query = 'select id, winner, result, playedOn from games order by playedOn desc;'
+    cur = mysql.connection.cursor()
+    cur.execute(query)
+    past_games = cur.fetchall()
     return jsonify(past_games)
 
 
