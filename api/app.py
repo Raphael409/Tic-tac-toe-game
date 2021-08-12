@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
 from flask_cors import CORS
+from enum import Enum
 
 app = Flask(__name__)
 
@@ -16,6 +17,12 @@ mysql = MySQL(app)
 current_game = [['X', 'O', ''], ['', '', ''], ['', '', '']]
 
 
+class BookStatus(Enum):
+    Active = 1
+    Deleted = 2
+    Borrowed = 3
+
+
 @app.route('/')
 def index():
     return 'Tic-Tac-Toe API'
@@ -23,10 +30,26 @@ def index():
 
 @app.route('/books')
 def books():
-    query = 'select id, book_name from books'
+    query = 'select id, book_name, BookStatus from books'
     cur = mysql.connection.cursor()
     cur.execute(query)
     all_books = cur.fetchall()
+    for book in all_books:
+        book_status = BookStatus(book['BookStatus'])
+        book["BookStatus"] = book_status.name
+    return jsonify(all_books)
+
+
+@app.route('/activeBooks')
+def active_books():
+    active_book_status = BookStatus.Active
+    query = f'select id, book_name, BookStatus from books where BookStatus={active_book_status.value}'
+    cur = mysql.connection.cursor()
+    cur.execute(query)
+    all_books = cur.fetchall()
+    for book in all_books:
+        book_status = BookStatus(book['BookStatus'])
+        book["BookStatus"] = book_status.name
     return jsonify(all_books)
 
 
