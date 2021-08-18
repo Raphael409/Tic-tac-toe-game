@@ -42,7 +42,33 @@ def books():
 
 @app.route('/activeBooks')
 def active_books():
-    active_book_status = BookStatus.Active
+    deleted_book_status = BookStatus.Active
+    query = f'select id, book_name, BookStatus from books where BookStatus={deleted_book_status.value}'
+    cur = mysql.connection.cursor()
+    cur.execute(query)
+    all_books = cur.fetchall()
+    for book in all_books:
+        book_status = BookStatus(book['BookStatus'])
+        book["BookStatus"] = book_status.name
+    return jsonify(all_books)
+
+
+@app.route('/borrowedBooks')
+def borrow_books():
+    borrowed_book_status = BookStatus.Borrowed
+    query = f'select id, book_name, BookStatus from books where BookStatus={borrowed_book_status.value}'
+    cur = mysql.connection.cursor()
+    cur.execute(query)
+    all_books = cur.fetchall()
+    for book in all_books:
+        book_status = BookStatus(book['BookStatus'])
+        book["BookStatus"] = book_status.name
+    return jsonify(all_books)
+
+
+@app.route('/deletedBooks')
+def delete_books():
+    active_book_status = BookStatus.Deleted
     query = f'select id, book_name, BookStatus from books where BookStatus={active_book_status.value}'
     cur = mysql.connection.cursor()
     cur.execute(query)
