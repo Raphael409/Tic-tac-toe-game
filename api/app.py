@@ -40,9 +40,9 @@ def books():
     return jsonify(all_books)
 
 
-@app.route('/activeBooks')
-def active_books():
-    deleted_book_status = BookStatus.Active
+@app.route('/deletedBooks')
+def delete_books():
+    deleted_book_status = BookStatus.Deleted
     query = f'select id, book_name, BookStatus from books where BookStatus={deleted_book_status.value}'
     cur = mysql.connection.cursor()
     cur.execute(query)
@@ -66,9 +66,9 @@ def borrow_books():
     return jsonify(all_books)
 
 
-@app.route('/deletedBooks')
-def delete_books():
-    active_book_status = BookStatus.Deleted
+@app.route('/activeBooks')
+def active_books():
+    active_book_status = BookStatus.Active
     query = f'select id, book_name, BookStatus from books where BookStatus={active_book_status.value}'
     cur = mysql.connection.cursor()
     cur.execute(query)
