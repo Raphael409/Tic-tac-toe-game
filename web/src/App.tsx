@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import './App.css';
 
@@ -39,7 +38,7 @@ class App extends Component<{}, MyState> {
     const cell = currentGame[row][col];
     if (cell === '') {
       currentGame[row][col] = turn;
-      turn == 'X' ? this.setState({ turn: 'O' }) : this.setState({ turn: 'X' });
+      turn === 'X' ? this.setState({ turn: 'O' }) : this.setState({ turn: 'X' });
     }
   };
 
@@ -52,10 +51,10 @@ class App extends Component<{}, MyState> {
 
     return (
       <Container className="p-3">
-        <Jumbotron>
+        <div className="h-100 p-5 bg-light border rounded-3">
           <h1 className="header">Tic Tac Toe</h1>
-        </Jumbotron>
-        <Jumbotron>
+        </div>
+        <div className="h-100 p-5 bg-light border rounded-3">
           <Row>
             <Col>
               <Card style={{ textAlign: 'right', fontWeight: 'bold' }} body>X Wins: {xWinner}</Card>
@@ -91,7 +90,7 @@ class App extends Component<{}, MyState> {
           <div>
             <Button className="center-align" variant="primary" onClick={this.restartGame}>Restart Game</Button>
           </div>
-        </Jumbotron>
+        </div>
       </Container>
     );
   }
